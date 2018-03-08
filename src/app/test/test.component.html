@@ -1,0 +1,13 @@
+<div>
+    <button [ngStyle]="{background: 'red'}" (click)="testEvent()">Click Me.</button>
+    <h1>{{name}}</h1>
+    <form>
+        <input type="text" [value]="name" (keyup)="name=$event.target.value" />
+        <input type="text" [value]="name" (keyup)="name=$event.target.value" />
+        <input type="text" [(ngModel)]="name" name="name"/>
+    </form>
+
+    <h2 *ngIf="flag" style="display:none">Hello! How are you doing?</h2>
+    <h2 *ngIf="!flag">I am doing well! Thank you!</h2>
+
+</div>

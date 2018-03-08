@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">            
+        <ul class="nav navbar-nav">
+            <li routerLinkActive="active"><a [routerLink]="['/products']">Browse Products</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/login']">Login</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/register']">Register</a></li>    
+        </ul>
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,16 @@
+<div class="thumbnail" appHighlight>
+  <img src={{productItem.imageUrl}} alt={{productItem.title}} />
+  <div class="caption">
+    <h3>{{productItem.title | lowercase}}</h3>
+    <p>{{productItem.description.substr(0, 50)}}...</p>
+    <!--<p>USD {{productItem.price | number:'.2-2'}}</p>-->
+    <p>{{productItem.price | currency:'INR':true:'.2-2'}}</p>
+    <p>
+      <button class="btn btn-warning btn-sm">Add to Cart</button>
+      <button 
+        class="btn btn-default btn-sm"
+        [routerLink]="['/products', productItem.id]"
+      >View Details</button>
+    </p>
+  </div>
+</div>
